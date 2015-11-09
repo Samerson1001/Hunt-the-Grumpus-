@@ -1,51 +1,30 @@
-castle = {
-         '1': {
+maze = {
              'a': {
-                  'contents': {
-                              'You find yourself in an dark cell'
-                              },
                    'actions': {
                               'move': {
                                       'doors': {'north': 'b'}
                                       },
-                              'search room' : {
-                                              'bed' : 'Under the pillow you find a knife'
-                                                      '\n'
-                                                      'You now have a knife'
-                                              }
+                              'shoot'
                                 }
                   },
              'b': {
-                  'contents': {
-                              'You are in a deserted guard room'
-                              },
                   'actions': {
                              'move': {
                                      'doors': {'south': 'a',
                                                 'west': 'c',
                                                'north': 'd'}
                                      },
-                             'search room': {
-                                            'table' : 'On the table you find a cracked shield'
-                                                      '\n'
-                                                      'You now have a cracked shield',
-                                            'desk': 'In the drawer you find a coin pouch'
-                                                    '\n'
-                                                    'You now have 7 coins',
-                                            'cabinet' : 'You open to cabinet to have a dead body shot in the head by an arrow fall out'
-                                            }
+                             'search room'
                              }
                   },
              'c': {
-                  'contents': {},
                    'actions': {
                               'move': {
                                       'doors': {'east': 'b'}
                                       }
                                }
-                   },ls
+                   },
              'd': {
-                  'contents': {},
                    'actions': {
                               'move': {
                                       'doors': {'south': 'b',
@@ -55,7 +34,6 @@ castle = {
                                }
                   },
              'e': {
-                  'contents': {},
                    'actions': {
                               'move': {
                                       'doors': {'east': 'd',
@@ -64,7 +42,6 @@ castle = {
                               }
                   },
              'f': {
-                  'contents': {},
                    'actions': {
                               'move': {
                                       'doors': {'west': 'd'}
@@ -72,27 +49,13 @@ castle = {
                               }
                   },
              'g': {
-                  'contents': {},
                    'actions': {
                               'move': {
                                       'doors': {'south': 'e'}
                                       }
                               }
                    }
-              },
-         '2': {
-              'Room': {
-                      'a': {
-                           'contents': {},
-                              'doors': {'front': 'b'}
-                           },
-                      'b': {
-                           'contents': {},
-                              'doors': {'back': 'b'}
-                           }
-                      }
-              }
-          }
+        }
 
 def actions (level, room):        
     title = False

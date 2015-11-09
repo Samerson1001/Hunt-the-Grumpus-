@@ -43,7 +43,7 @@ castle = {
                                       'doors': {'east': 'b'}
                                       }
                                }
-                   },
+                   },ls
              'd': {
                   'contents': {},
                    'actions': {

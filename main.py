@@ -2,59 +2,204 @@ maze = {
              'a': {
                    'actions': {
                               'move': {
-                                      'doors': {'north': 'b'}
+                                      'doors': {'': ,
+                                                '': ,
+                                                '': }
                                       },
                               'shoot'
                                 }
                   },
              'b': {
-                  'actions': {
-                             'move': {
-                                     'doors': {'south': 'a',
-                                                'west': 'c',
-                                               'north': 'd'}
-                                     },
-                             'search room'
-                             }
+                   'actions': {
+                              'move': {
+                                      'doors': {'': ,
+                                                '': ,
+                                                '': }
+                                      },
+                              'shoot'
+                                }
                   },
-             'c': {
+              'c': {
                    'actions': {
                               'move': {
-                                      'doors': {'east': 'b'}
-                                      }
-                               }
-                   },
-             'd': {
-                   'actions': {
-                              'move': {
-                                      'doors': {'south': 'b',
-                                                 'west': 'e',
-                                                 'east': 'f'}
-                                      }
-                               }
+                                      'doors': {'': ,
+                                                '': ,
+                                                '': }
+                                      },
+                              'shoot'
+                                }
                   },
-             'e': {
+              'd': {
                    'actions': {
                               'move': {
-                                      'doors': {'east': 'd',
-                                               'north': 'g'}
-                                      }
-                              }
+                                      'doors': {'': ,
+                                                '': ,
+                                                '': }
+                                      },
+                              'shoot'
+                                }
                   },
-             'f': {
+
+              'e': {
                    'actions': {
                               'move': {
-                                      'doors': {'west': 'd'}
-                                      }
-                              }
+                                      'doors': {'': ,
+                                                '': ,
+                                                '': }
+                                      },
+                              'shoot'
+                                }
                   },
-             'g': {
+              'f': {
                    'actions': {
                               'move': {
-                                      'doors': {'south': 'e'}
-                                      }
-                              }
-                   }
+                                      'doors': {'': ,
+                                                '': ,
+                                                '': }
+                                      },
+                              'shoot'
+                                }
+                  },
+              'g': {
+                   'actions': {
+                              'move': {
+                                      'doors': {'': ,
+                                                '': ,
+                                                '': }
+                                      },
+                              'shoot'
+                                }
+                  },
+              'h': {
+                   'actions': {
+                              'move': {
+                                      'doors': {'': ,
+                                                '': ,
+                                                '': }
+                                      },
+                              'shoot'
+                                }
+                  },
+              'i': {
+                   'actions': {
+                              'move': {
+                                      'doors': {'': ,
+                                                '': ,
+                                                '': }
+                                      },
+                              'shoot'
+                                }
+                  },
+              'j': {
+                   'actions': {
+                              'move': {
+                                      'doors': {'': ,
+                                                '': ,
+                                                '': }
+                                      },
+                              'shoot'
+                                }
+                  },
+              'k': {
+                   'actions': {
+                              'move': {
+                                      'doors': {'': ,
+                                                '': ,
+                                                '': }
+                                      },
+                              'shoot'
+                                }
+                  },
+              'l': {
+                   'actions': {
+                              'move': {
+                                      'doors': {'': ,
+                                                '': ,
+                                                '': }
+                                      },
+                              'shoot'
+                                }
+                  },
+              'm': {
+                   'actions': {
+                              'move': {
+                                      'doors': {'': ,
+                                                '': ,
+                                                '': }
+                                      },
+                              'shoot'
+                                }
+                  },
+              'n': {
+                   'actions': {
+                              'move': {
+                                      'doors': {'': ,
+                                                '': ,
+                                                '': }
+                                      },
+                              'shoot'
+                                }
+                  },
+              'm': {
+                   'actions': {
+                              'move': {
+                                      'doors': {'': ,
+                                                '': ,
+                                                '': }
+                                      },
+                              'shoot'
+                                }
+                  },
+              'o': {
+                   'actions': {
+                              'move': {
+                                      'doors': {'': ,
+                                                '': ,
+                                                '': }
+                                      },
+                              'shoot'
+                                }
+                  },
+              'p': {
+                   'actions': {
+                              'move': {
+                                      'doors': {'': ,
+                                                '': ,
+                                                '': }
+                                      },
+                              'shoot'
+                                }
+                  },
+              'q': {
+                   'actions': {
+                              'move': {
+                                      'doors': {'': ,
+                                                '': ,
+                                                '': }
+                                      },
+                              'shoot'
+                                }
+                  },
+              'r': {
+                   'actions': {
+                              'move': {
+                                      'doors': {'': ,
+                                                '': ,
+                                                '': }
+                                      },
+                              'shoot'
+                                }
+                  },
+              's': {
+                   'actions': {
+                              'move': {
+                                      'doors': {'': ,
+                                                '': ,
+                                                '': }
+                                      },
+                              'shoot'
+                                }
+                  },
         }
 
 def actions (level, room):        

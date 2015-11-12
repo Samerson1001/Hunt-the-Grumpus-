@@ -2,9 +2,9 @@ maze = {
              'a': {
                    'actions': {
                               'move': {
-                                      'doors': {'': ,
-                                                '': ,
-                                                '': }
+                                      'doors': {'e': e,
+                                                'f': f,
+                                                'b': b}
                                       },
                               'shoot'
                                 }
@@ -12,9 +12,9 @@ maze = {
              'b': {
                    'actions': {
                               'move': {
-                                      'doors': {'': ,
-                                                '': ,
-                                                '': }
+                                      'doors': {'a': a,
+                                                'h': h,
+                                                'c': c}
                                       },
                               'shoot'
                                 }
@@ -22,9 +22,9 @@ maze = {
               'c': {
                    'actions': {
                               'move': {
-                                      'doors': {'': ,
-                                                '': ,
-                                                '': }
+                                      'doors': {'b': b,
+                                                'j': j,
+                                                'd': d}
                                       },
                               'shoot'
                                 }
@@ -32,20 +32,19 @@ maze = {
               'd': {
                    'actions': {
                               'move': {
-                                      'doors': {'': ,
-                                                '': ,
-                                                '': }
+                                      'doors': {'c': c,
+                                                'l': l,
+                                                'e': e}
                                       },
                               'shoot'
                                 }
                   },
-
               'e': {
                    'actions': {
                               'move': {
-                                      'doors': {'': ,
-                                                '': ,
-                                                '': }
+                                      'doors': {'d': d,
+                                                'n': n,
+                                                'a': a}
                                       },
                               'shoot'
                                 }
@@ -53,9 +52,9 @@ maze = {
               'f': {
                    'actions': {
                               'move': {
-                                      'doors': {'': ,
-                                                '': ,
-                                                '': }
+                                      'doors': {'a': a,
+                                                'g': g,
+                                                'o': o}
                                       },
                               'shoot'
                                 }
@@ -63,9 +62,9 @@ maze = {
               'g': {
                    'actions': {
                               'move': {
-                                      'doors': {'': ,
-                                                '': ,
-                                                '': }
+                                      'doors': {'f': f,
+                                                'h': h,
+                                                'p': p}
                                       },
                               'shoot'
                                 }
@@ -73,9 +72,9 @@ maze = {
               'h': {
                    'actions': {
                               'move': {
-                                      'doors': {'': ,
-                                                '': ,
-                                                '': }
+                                      'doors': {'g': g,
+                                                'b': b,
+                                                'i': i}
                                       },
                               'shoot'
                                 }
@@ -83,9 +82,9 @@ maze = {
               'i': {
                    'actions': {
                               'move': {
-                                      'doors': {'': ,
-                                                '': ,
-                                                '': }
+                                      'doors': {'h': h,
+                                                'j': j,
+                                                'q': q}
                                       },
                               'shoot'
                                 }
@@ -93,9 +92,9 @@ maze = {
               'j': {
                    'actions': {
                               'move': {
-                                      'doors': {'': ,
-                                                '': ,
-                                                '': }
+                                      'doors': {'i': i,
+                                                'c': c,
+                                                'k': k}
                                       },
                               'shoot'
                                 }
@@ -103,9 +102,9 @@ maze = {
               'k': {
                    'actions': {
                               'move': {
-                                      'doors': {'': ,
-                                                '': ,
-                                                '': }
+                                      'doors': {'j': g,
+                                                'l': l,
+                                                'r': r}
                                       },
                               'shoot'
                                 }
@@ -113,9 +112,9 @@ maze = {
               'l': {
                    'actions': {
                               'move': {
-                                      'doors': {'': ,
-                                                '': ,
-                                                '': }
+                                      'doors': {'d': d,
+                                                'k': k,
+                                                'm': m}
                                       },
                               'shoot'
                                 }
@@ -123,9 +122,9 @@ maze = {
               'm': {
                    'actions': {
                               'move': {
-                                      'doors': {'': ,
-                                                '': ,
-                                                '': }
+                                      'doors': {'n': ,
+                                                's': ,
+                                                'l': }
                                       },
                               'shoot'
                                 }
@@ -133,19 +132,9 @@ maze = {
               'n': {
                    'actions': {
                               'move': {
-                                      'doors': {'': ,
-                                                '': ,
-                                                '': }
-                                      },
-                              'shoot'
-                                }
-                  },
-              'm': {
-                   'actions': {
-                              'move': {
-                                      'doors': {'': ,
-                                                '': ,
-                                                '': }
+                                      'doors': {'e': ,
+                                                'o': ,
+                                                'm': }
                                       },
                               'shoot'
                                 }
@@ -153,9 +142,9 @@ maze = {
               'o': {
                    'actions': {
                               'move': {
-                                      'doors': {'': ,
-                                                '': ,
-                                                '': }
+                                      'doors': {'t': ,
+                                                'f': ,
+                                                'n': }
                                       },
                               'shoot'
                                 }
@@ -163,9 +152,9 @@ maze = {
               'p': {
                    'actions': {
                               'move': {
-                                      'doors': {'': ,
-                                                '': ,
-                                                '': }
+                                      'doors': {'q': ,
+                                                'g': ,
+                                                't': }
                                       },
                               'shoot'
                                 }
@@ -173,9 +162,9 @@ maze = {
               'q': {
                    'actions': {
                               'move': {
-                                      'doors': {'': ,
-                                                '': ,
-                                                '': }
+                                      'doors': {'p': ,
+                                                'i': ,
+                                                'r': }
                                       },
                               'shoot'
                                 }
@@ -183,9 +172,9 @@ maze = {
               'r': {
                    'actions': {
                               'move': {
-                                      'doors': {'': ,
-                                                '': ,
-                                                '': }
+                                      'doors': {'k': ,
+                                                's': ,
+                                                'q': }
                                       },
                               'shoot'
                                 }
@@ -193,13 +182,23 @@ maze = {
               's': {
                    'actions': {
                               'move': {
-                                      'doors': {'': ,
-                                                '': ,
-                                                '': }
+                                      'doors': {'t': ,
+                                                'm': ,
+                                                'r': }
                                       },
                               'shoot'
                                 }
                   },
+                't': {
+                   'actions': {
+                              'move': {
+                                      'doors': {'o': ,
+                                                's': ,
+                                                'p': }
+                                      },
+                              'shoot'
+                                }
+                  }
         }
 
 def actions (level, room):        

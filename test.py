@@ -3,7 +3,7 @@ import random
 num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
 	   11, 12, 13, 14, 15, 16, 17, 18, 19]
 
-random.shuffle(numbers)
+random.shuffle(num)
 
 maze = [
 		[num[0],[num[4],num[5],num[1]]],
@@ -28,5 +28,5 @@ maze = [
 	    [num[19],[num[18],num[15],num[12]]],
 	   ]
 
-
-print(maze[1][1])
+print("You are in room ", maze[0][0])
+print("You can go to ", maze[0][1])

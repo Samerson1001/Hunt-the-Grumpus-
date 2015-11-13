@@ -1,13 +1,8 @@
 maze = {
              'a': {
-                   'actions': {
-                              'move': {
-                                      'doors': {'e': e,
-                                                'f': f,
-                                                'b': b}
-                                      },
-                              'shoot'
-                                }
+                    {e, f, b}
+                  },
+
                   },
              'b': {
                    'actions': {
@@ -102,7 +97,7 @@ maze = {
               'k': {
                    'actions': {
                               'move': {
-                                      'doors': {'j': g,
+                                      'doors': {'j': j,
                                                 'l': l,
                                                 'r': r}
                                       },
@@ -122,9 +117,9 @@ maze = {
               'm': {
                    'actions': {
                               'move': {
-                                      'doors': {'n': ,
-                                                's': ,
-                                                'l': }
+                                      'doors': {'n': n,
+                                                's': s,
+                                                'l': l}
                                       },
                               'shoot'
                                 }
@@ -132,9 +127,9 @@ maze = {
               'n': {
                    'actions': {
                               'move': {
-                                      'doors': {'e': ,
-                                                'o': ,
-                                                'm': }
+                                      'doors': {'e': e,
+                                                'o': o,
+                                                'm': m}
                                       },
                               'shoot'
                                 }
@@ -142,9 +137,9 @@ maze = {
               'o': {
                    'actions': {
                               'move': {
-                                      'doors': {'t': ,
-                                                'f': ,
-                                                'n': }
+                                      'doors': {'t': t,
+                                                'f': f,
+                                                'n': n}
                                       },
                               'shoot'
                                 }
@@ -152,9 +147,9 @@ maze = {
               'p': {
                    'actions': {
                               'move': {
-                                      'doors': {'q': ,
-                                                'g': ,
-                                                't': }
+                                      'doors': {'q': q,
+                                                'g': g,
+                                                't': t}
                                       },
                               'shoot'
                                 }
@@ -270,3 +265,26 @@ main()
 
 
 #convert to list for no keys
+
+
+
+
+
+
+
+a = [e, f, g]
+
+
+
+maze = [
+		[a[e,f,g]],
+	    [b[e, f, g]]
+	    ]
+
+
+
+
+
+
+
+

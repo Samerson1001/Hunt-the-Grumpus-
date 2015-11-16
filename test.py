@@ -12,7 +12,6 @@ while cave1 == cave2 or cave1 == bat1 or cave1 == bat2 or cave2 == bat1 or cave2
 	cave2 = random.randint(1,19)
 	bat1 = random.randint(1,19)
 	bat2 = random.randint(1,19)
-print("cave", cave1, cave2, "bat", bat1, bat2, "grump", grump)
 caves = [
 		  cave1, cave2
 		]
@@ -45,18 +44,20 @@ maze = [
 pos = 0
 
 while 1:
+	print("cave", cave1, cave2, "bat", bat1, bat2, "grump", grump)
 	print("**************************")
 	i = 0
 	k = 0
 	while i < 3:
+		k = 0
 		while k < 2:
 			if maze[pos][1][i] == caves[k]:
 				print("You feel the breeze of a cave\n")
 			if maze[pos][1][i] == bats[k]:
 				print("You hear the flapping of wings\n")
-			if maze[pos][1][i] == grump:
-				print("You smell the stench of the grump\n")
 			k += 1
+		if maze[pos][1][i] == grump:
+				print("You smell the stench of the grump\n")
 		i += 1
 		
 	print("You are in room ", maze[pos][0])

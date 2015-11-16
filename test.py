@@ -63,26 +63,30 @@ while alive:
 		
 	print("You are in room ", maze[pos][0])
 	print("You can go to ", maze[pos][1])
-	newpos = input("Go to: ")
-	newpos = int(newpos)
-	
-	test = 0
-	i = 0
-	while i < 3:
-		if maze[pos][1][i] == newpos:
-			test += 1
-		i += 1
+	choice = input("What you wanna do (move/shoot): ")
+	if choice == "move":
+		newpos = input("Go to: ")
+		newpos = int(newpos)
+		
+		test = 0
+		i = 0
+		while i < 3:
+			if maze[pos][1][i] == newpos:
+				test += 1
+			i += 1
 
-	if test > 0:
-		x = 0
-		while x < 20:
-			if maze[x][0] == newpos:
-				pos = x
-				break
-			x += 1
-	else:
-		print("**************************")
-		print("Invalid room")
+		if test > 0:
+			x = 0
+			while x < 20:
+				if maze[x][0] == newpos:
+					pos = x
+					break
+				x += 1
+		else:
+			print("**************************")
+			print("Invalid room")
+	if choice == "shoot":
+		print("Twang")
 
 	if maze[pos][0] == caves[0] or maze[pos][0] == caves[1]:
 		print("Thou Art Dead")

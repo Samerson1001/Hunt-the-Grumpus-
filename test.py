@@ -42,8 +42,9 @@ maze = [
 	   ]
 
 pos = 0
+alive = 1
 
-while 1:
+while alive:
 	print("cave", cave1, cave2, "bat", bat1, bat2, "grump", grump)
 	print("**************************")
 	i = 0
@@ -80,16 +81,23 @@ while 1:
 				break
 			x += 1
 	else:
+		print("**************************")
 		print("Invalid room")
 
-
-
-
-
-
-
-
-
-
-
+	if maze[pos][0] == caves[0] or maze[pos][0] == caves[1]:
+		print("Thou Art Dead")
+		alive = 0
+	if maze[pos][0] == grump:
+		print("The grump got ya")
+		alive = 0
+	test1 = 1
+	if maze[pos][0] == bats[0] or maze[pos][0] == bats[1]:
+		print("**************************")
+		print("Ew gross. Bats")
+		while maze[pos][0] == bats[0]:
+			test1 = 0
+			pos = random.randint(0,19)
+		if test1:
+			while maze[pos][0] == bats[1]:
+				pos = random.randint(0,19)
 

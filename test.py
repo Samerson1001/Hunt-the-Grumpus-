@@ -3,6 +3,16 @@ import random
 num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
 	   11, 12, 13, 14, 15, 16, 17, 18, 19]
 random.shuffle(num)
+cave1 = random.randint(1,19)
+cave2 = random.randint(1,19)
+bat1 = random.randint(1,19)
+bat2 = random.randint(1,19)
+grump = random.randint(1,19)
+while cave1 == cave2 or cave1 == bat1 or cave1 == bat2 or cave2 == bat1 or cave2 == bat2 or	bat1 == bat2:
+	cave2 = random.randint(1,19)
+	bat1 = random.randint(1,19)
+	bat2 = random.randint(1,19)
+print(cave1, cave2, bat1, bat2, grump)
 maze = [
 		[num[0],[num[4],num[5],num[1]]],
 	    [num[1],[num[0],num[7],num[2]]],
@@ -29,6 +39,7 @@ maze = [
 pos = 0
 
 while 1:
+	print("**************************")
 	print("You are in room ", maze[pos][0])
 	print("You can go to ", maze[pos][1])
 	newpos = input("Go to: ")

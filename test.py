@@ -3,21 +3,6 @@ import random
 num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
 	   11, 12, 13, 14, 15, 16, 17, 18, 19]
 random.shuffle(num)
-cave1 = random.randint(1,19)
-cave2 = random.randint(1,19)
-bat1 = random.randint(1,19)
-bat2 = random.randint(1,19)
-grump = random.randint(1,19)
-while cave1 == cave2 or cave1 == bat1 or cave1 == bat2 or cave2 == bat1 or cave2 == bat2 or	bat1 == bat2:
-	cave2 = random.randint(1,19)
-	bat1 = random.randint(1,19)
-	bat2 = random.randint(1,19)
-caves = [
-		  cave1, cave2
-		]
-bats = [
-		  bat1, bat2
-	   ]
 maze = [
 		[num[0],[num[4],num[5],num[1]]],
 	    [num[1],[num[0],num[7],num[2]]],
@@ -40,11 +25,27 @@ maze = [
 	    [num[18],[num[10],num[17],num[19]]],
 	    [num[19],[num[18],num[15],num[12]]],
 	   ]
-
-pos = 0
+cave1 = random.randint(1,19)
+cave2 = random.randint(1,19)
+bat1 = random.randint(1,19)
+bat2 = random.randint(1,19)
+grump = random.randint(1,19)
+while cave1 == cave2 or cave1 == bat1 or cave1 == bat2 or cave2 == bat1 or cave2 == bat2 or	bat1 == bat2:
+	cave2 = random.randint(1,19)
+	bat1 = random.randint(1,19)
+	bat2 = random.randint(1,19)
+caves = [
+		  cave1, cave2
+		]
+bats = [
+		  bat1, bat2
+	   ]
+pos = 0 #  pos needs to be equal to where the maze value / room is equal to 0. not maze[0]
 alive = 1
-
 while alive:
+	if maze[pos][0] == grump:
+		print("The grump got ya")
+		break
 	print("cave", cave1, cave2, "bat", bat1, bat2, "grump", grump)
 	print("**************************")
 	i = 0
@@ -85,15 +86,42 @@ while alive:
 		else:
 			print("**************************")
 			print("Invalid room")
-	if choice == "shoot":
+	elif choice == "shoot":
+		direction = input("Where you shootin: ")
+		shots = []
+		p = 0
+		q = 0
+		# while direction[p] != ' ':
+		# 	#shots[q]
+		# 	pass
 		print("Twang")
+	elif choice == "1337":#"totallyawesomehackerthing1337":
+		print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+		user = input("User_ ")
+		if user == "1001":#"c00lguy1":
+			password = input("Password_ ")
+			if password == "0110":#"n0b":
+				print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
+				print("Dev menu")
+				print("--------")
+				guh = 0
+				while guh < 20:
+					print(maze[guh])+
+					guh+=1
+				print("cave ", cave1, cave2, "\nbat  ", bat1, bat2, "\ngrump", grump)
+
+				pause = input("")
+		
+		while 1:
+			x = 0
+	else:
+		print("**************************")
+		print("Invalid action")
 
 	if maze[pos][0] == caves[0] or maze[pos][0] == caves[1]:
 		print("Thou Art Dead")
 		alive = 0
-	if maze[pos][0] == grump:
-		print("The grump got ya")
-		alive = 0
+	
 	test1 = 1
 	if maze[pos][0] == bats[0] or maze[pos][0] == bats[1]:
 		print("**************************")

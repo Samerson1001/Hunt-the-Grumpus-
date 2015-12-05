@@ -106,7 +106,7 @@ while alive:
 				print("--------")
 				guh = 0
 				while guh < 20:
-					print(maze[guh])+
+					print(maze[guh])
 					guh+=1
 				print("cave ", cave1, cave2, "\nbat  ", bat1, bat2, "\ngrump", grump)
 

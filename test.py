@@ -109,11 +109,9 @@ while alive:
 					print(maze[guh])
 					guh+=1
 				print("cave ", cave1, cave2, "\nbat  ", bat1, bat2, "\ngrump", grump)
-
+				
 				pause = input("")
-		
-		while 1:
-			x = 0
+
 	else:
 		print("**************************")
 		print("Invalid action")

@@ -51,11 +51,28 @@ alive = 1
 # -------------------------------- web ----------------------------------------
 #!/usr/bin/env python3
 
+import http.cookies
+import os
+
+cookie = http.cookies.SimpleCookie()
+cookie['magic-number'] = 43;
+
 print('Content-Type: text/html')
 print()
 
+cookie_string = os.environ.get('HTTP_COOKIE')
+
+if cookie_string == '':
+    output = "I don't see a cookie."
+else:
+    cookie = http.cookies.SimpleCookie()
+    cookie.load(cookie_string)
+    number = cookie['magic-number'].value
+    output = "The magic number is " + number
+
 print('<html><body>')
 print('hello world')
+print(output)
 print('</body></html>')
 
 import cgi

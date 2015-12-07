@@ -25,15 +25,7 @@ maze = [
 	    [num[18],[num[10],num[17],num[19]]],
 	    [num[19],[num[18],num[15],num[12]]],
 	   ]
-cave1 = random.randint(1,19)
-cave2 = random.randint(1,19)
-bat1 = random.randint(1,19)
-bat2 = random.randint(1,19)
-grump = random.randint(1,19)
-while cave1 == cave2 or cave1 == bat1 or cave1 == bat2 or cave2 == bat1 or cave2 == bat2 or	bat1 == bat2:
-	cave2 = random.randint(1,19)
-	bat1 = random.randint(1,19)
-	bat2 = random.randint(1,19)
+
 caves = [
 		  cave1, cave2
 		]

@@ -2,7 +2,6 @@ import random
 
 num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
 	   11, 12, 13, 14, 15, 16, 17, 18, 19]
-
 maze = [
 		[num[0],[num[4],num[5],num[1]]],
 	    [num[1],[num[0],num[7],num[2]]],
@@ -29,7 +28,8 @@ cave1 = 1
 cave2 = 2
 bat1 = 3
 bat2 = 4
-grump = 5
+grump = 11
+pos = 0
 
 caves = [
 		  cave1, cave2
@@ -38,14 +38,27 @@ bats = [
 		  bat1, bat2
 	   ]
 
-pos = 0
-
 alive = 1
 while alive:
+	if maze[pos][0] == bats[0] or maze[pos][0] == bats[1]:
+		print("**************************")
+		print("Ew gross. Bats")
+		while maze[pos][0] == bats[0]:
+			test1 = 0
+			pos = random.randint(0,19)
+		if test1:
+			while maze[pos][0] == bats[1]:
+				pos = 10
+	
 	if maze[pos][0] == grump:
 		print("The grump got ya")
+		break	
+
+	test1 = 1
+	if maze[pos][0] == caves[0] or maze[pos][0] == caves[1]:
+		print("Thou Art Dead (cave)")
 		break
-	print("cave", cave1, cave2, "bat", bat1, bat2, "grump", grump, "pos", pos)
+
 	print("**************************")
 	i = 0
 	k = 0
@@ -53,12 +66,12 @@ while alive:
 		k = 0
 		while k < 2:
 			if maze[pos][1][i] == caves[k]:
-				print("You feel the breeze of a cave\n")
+				print("You feel the breeze of a cave")
 			if maze[pos][1][i] == bats[k]:
-				print("You hear the flapping of wings\n")
+				print("You hear the flapping of wings")
 			k += 1
 		if maze[pos][1][i] == grump:
-				print("You smell the stench of the grump\n")
+				print("You smell the stench of the grump")
 		i += 1
 		
 	print("You are in room ", maze[pos][0])
@@ -90,10 +103,14 @@ while alive:
 		shots = []
 		p = 0
 		q = 0
+		if grump == 7:
+			print("Got em")
+			break
+		grump = 7
 		# while direction[p] != ' ':
 		# 	#shots[q]
 		# 	pass
-		print("Twang")
+		print("Twang\nYou startled the Grump")
 	elif choice == "1337":#"totallyawesomehackerthing1337":
 		print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")
 		user = input("User_ ")
@@ -115,18 +132,7 @@ while alive:
 		print("**************************")
 		print("Invalid action")
 
-	if maze[pos][0] == caves[0] or maze[pos][0] == caves[1]:
-		print("Thou Art Dead (cave)")
-		alive = 0
+
 	
-	test1 = 1
-	if maze[pos][0] == bats[0] or maze[pos][0] == bats[1]:
-		print("**************************")
-		print("Ew gross. Bats")
-		while maze[pos][0] == bats[0]:
-			test1 = 0
-			pos = random.randint(0,19)
-		if test1:
-			while maze[pos][0] == bats[1]:
-				pos = random.randint(0,19)
+
 

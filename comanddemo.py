@@ -2,7 +2,7 @@ import random
 
 num = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10,
 	   11, 12, 13, 14, 15, 16, 17, 18, 19]
-random.shuffle(num)
+
 maze = [
 		[num[0],[num[4],num[5],num[1]]],
 	    [num[1],[num[0],num[7],num[2]]],
@@ -25,15 +25,12 @@ maze = [
 	    [num[18],[num[10],num[17],num[19]]],
 	    [num[19],[num[18],num[15],num[12]]],
 	   ]
-cave1 = random.randint(1,19)
-cave2 = random.randint(1,19)
-bat1 = random.randint(1,19)
-bat2 = random.randint(1,19)
-grump = random.randint(1,19)
-while cave1 == cave2 or cave1 == bat1 or cave1 == bat2 or cave2 == bat1 or cave2 == bat2 or	bat1 == bat2:
-	cave2 = random.randint(1,19)
-	bat1 = random.randint(1,19)
-	bat2 = random.randint(1,19)
+cave1 = 1
+cave2 = 2
+bat1 = 3
+bat2 = 4
+grump = 5
+
 caves = [
 		  cave1, cave2
 		]
@@ -41,29 +38,13 @@ bats = [
 		  bat1, bat2
 	   ]
 
-cave1, cave2, bat1, bat2, pos, grump = random.sample(num, 6)
+pos = 0
 
 alive = 1
 while alive:
 	if maze[pos][0] == grump:
 		print("The grump got ya")
-		break	
-
-	test1 = 1
-	if maze[pos][0] == caves[0] or maze[pos][0] == caves[1]:
-		print("Thou Art Dead (cave)")
 		break
-
-	if maze[pos][0] == bats[0] or maze[pos][0] == bats[1]:
-		print("**************************")
-		print("Ew gross. Bats")
-		while maze[pos][0] == bats[0]:
-			test1 = 0
-			pos = random.randint(0,19)
-		if test1:
-			while maze[pos][0] == bats[1]:
-				pos = random.randint(0,19)
-
 	print("cave", cave1, cave2, "bat", bat1, bat2, "grump", grump, "pos", pos)
 	print("**************************")
 	i = 0
@@ -134,7 +115,18 @@ while alive:
 		print("**************************")
 		print("Invalid action")
 
-
+	if maze[pos][0] == caves[0] or maze[pos][0] == caves[1]:
+		print("Thou Art Dead (cave)")
+		alive = 0
 	
-
+	test1 = 1
+	if maze[pos][0] == bats[0] or maze[pos][0] == bats[1]:
+		print("**************************")
+		print("Ew gross. Bats")
+		while maze[pos][0] == bats[0]:
+			test1 = 0
+			pos = random.randint(0,19)
+		if test1:
+			while maze[pos][0] == bats[1]:
+				pos = random.randint(0,19)
 

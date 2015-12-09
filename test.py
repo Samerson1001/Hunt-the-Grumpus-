@@ -16,7 +16,7 @@ maze = [
 	    [num[9],[num[2],num[10],num[8]]],
 	    [num[10],[num[9],num[11],num[18]]],
 	    [num[11],[num[3],num[12],num[10]]],
-	    [num[12],[num[11],num[10],num[19]]],
+	    [num[12],[num[11],num[13],num[19]]],
 	    [num[13],[num[4],num[14],num[12]]],
 	    [num[14],[num[13],num[5],num[15]]],
 	    [num[15],[num[14],num[16],num[19]]],

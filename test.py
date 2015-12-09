@@ -109,25 +109,42 @@ while alive:
 				print("**************************")
 				print("Invalid room")
 		elif choice == "shoot":
-			NumRooms = input("How many rooms?: ")
-			NumRooms = int(NumRooms)
-			shots = []
+			#NumRooms = input("How many rooms? (<6): ")
+			#NumRooms = int(NumRooms)
+			#if NumRooms < 6:
+			#	shots = []
+			#	arrowPos = pos
+			#	for var in range(NumRooms):
+			#		room = input("Room: ")
+			#		room = int(room)
+			#		shots.append(room)
+			Roomvals = input("Where you shootin: ")
+			shots = Roomvals.split()
 			arrowPos = pos
-			for var in range(NumRooms):
-				room = input("Room: ")
-				room = int(room)
-				shots.append(room)
-			for roomVar in range(len(shots)):
-				thisthing = shots[roomVar]
-				if thisthing in maze[arrowPos][1]:
-					bahl = 0
-					while maze[bahl][0] != shots[roomVar]:
-						bahl += 1
-					arrowPos = bahl
-					if maze[arrowPos][0] == grump:
-						print("It is done")
-						alive = False
-						dead = True
+			for x in range(len(shots)):
+				shots[x] = int(shots[x])
+				for roomVar in range(len(shots)):
+					thisthing = shots[roomVar]
+					if thisthing in maze[arrowPos][1]:
+						bahl = 0
+						while maze[bahl][0] != shots[roomVar]:
+							bahl += 1
+						arrowPos = bahl
+						if maze[arrowPos][0] == grump:
+							print("It is done")
+							alive = False
+							dead = True
+					else:
+						luck = random.randint(0,3)
+						if luck < 3:
+							arrowPos = maze[arrowPos][1][luck]
+						else:
+							if maze[arrowPos][0] == pos:
+								alive = False
+								dead = True
+								print("Complications arose")
+								pass
+
 			print("Twang")
 		elif choice == "1337":#"totallyawesomehackerthing1337":
 			print("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n")

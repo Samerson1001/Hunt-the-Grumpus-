@@ -114,8 +114,10 @@ shoot_form = """
     </form>
 """
 
-home = form.getvalue('home')
+shot_grump_print = False
+shot_yourself_print = False
 
+home = form.getvalue('home')
 # form logic
 if 'home' not in form or home == '':
     form_output = home_form
@@ -137,8 +139,39 @@ if 'home' not in form or home == '':
                         pos = x
                         break
                     x += 1
+
+    if 'shoot' in form:
+        Roomvals = form.getvalue('shoot')
+        shoot = ''
         
-    shoot = ''
+        shots = Roomvals.split()
+        arrowPos = pos
+        x = 0
+
+        for x in range(len(shots)):
+            shots[x] = int(shots[x])
+        for roomVar in range(len(shots)):
+            thisthing = shots[roomVar]
+            if thisthing in maze[arrowPos][1]:
+                bahl = 0
+                while maze[bahl][0] != shots[roomVar]:
+                    bahl += 1
+                arrowPos = bahl
+                if maze[arrowPos][0] == grump:        
+                    shot_grump_print = True
+                    alive = False
+                    dead = True
+                else:
+                    luck = random.randint(0,3)
+                    if luck < 3:
+                        arrowPos = maze[arrowPos][1][luck]
+                    else:
+                        if maze[arrowPos][0] == pos:
+                            alive = False
+                            dead = True
+                            shot_yourself_print = True
+                            #pass
+        
 elif home == 'move':
     if 'move' not in form or move == '':
         home = ''
@@ -180,26 +213,79 @@ cookie['maze19'] = maze[19]
 cookie['first_run'] = first_run
 print(cookie)
 
+# start of while loop
+hit_bat_print = False
+#for i in range(2):
+#while maze[pos][0] == bat1 or maze[pos][0] == bat2:
+if maze[pos][0] == bat1 or maze[pos][0] == bat2:
+    #pos = random.randint(0,19)
+    hit_bat_print = True
+    
+if maze[pos][0] == grump:
+    dead = True
+    alive = False
+
+for i in range(2):
+    if maze[pos][0] == caves[i]:
+        dead = True
+        alive = False
+
 print('Content-Type: text/html')
 print()
 
 print('<html><body>')
 
 # print positions
-print("cave", cave1, cave2, "bat", bat1, bat2, "grump", grump)
-print("pos", pos)
-print('<p>')
-for i in range(0, 19):
-    print(maze[i])
+if alive == True:
+    print("cave", cave1, cave2, "bat", bat1, bat2, "grump", grump)
+    print("pos", maze[pos][0])
+    print('<p>')
+    print("alive", alive, "dead", dead)
+    print('<p>')
+    for i in range(0, 19):
+        print(maze[i])
+        print('<br>')
+    print('<p>')
+
+    # print text
+    print("You are in room ", maze[pos][0])
     print('<br>')
-print('<p>')
+    print("You can go to ", maze[pos][1])
+    print('<p>')
 
-# print text
-print("You are in room ", maze[pos][0])
-print('<p>')
-print("You can go to ", maze[pos][1])
+    # print warnings
+    for i in range(3):
+        if maze[pos][1][i] == grump:
+            print("You smell the stench of the grump\n")
+            print('<br>')
 
-# print forms
-print(form_output)
+    for i in range(3):
+        for k in range(2):
+            if maze[pos][1][i] == caves[k]:
+                print("You feel the breeze of a cave\n")
+                print('<br>')
+                
+    for i in range(3):
+        for k in range(2):
+            if maze[pos][1][i] == bats[k]:
+                print("You hear the flapping of wings\n")
+                print('<br>')
+
+    # print when you hit bats and get moved
+    if (hit_bat_print):
+        print("Ew gross. Bats")
+
+    # print forms
+    print(form_output)
+else:
+    # print when you shoot grump
+    if (shot_grump_print):
+        print("It is done")    
+    elif (shot_yourself_print):
+        print("Complications arose (you shot yourself)")
+    elif maze[pos][0] == grump:
+        print("The grump got ya")
+    else:        
+        print("Thou art dead (cave)")
 
 print('</body></html>')

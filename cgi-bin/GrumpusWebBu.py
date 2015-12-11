@@ -183,6 +183,21 @@ elif home == 'shoot':
 else:
     form_output = home_form.replace('__HOME__', home)
 
+# start of while loop
+hit_bat_print = False
+while maze[pos][0] == bat1 or maze[pos][0] == bat2:
+    pos = random.randint(0,19)
+    hit_bat_print = True
+
+if maze[pos][0] == grump:
+    dead = True
+    alive = False
+
+for i in range(2):
+    if maze[pos][0] == caves[i]:
+        dead = True
+        alive = False
+
 # store values in cookie
 cookie['pos'] = pos
 cookie['grump'] = grump
@@ -213,22 +228,8 @@ cookie['maze19'] = maze[19]
 cookie['first_run'] = first_run
 print(cookie)
 
-# start of while loop
-hit_bat_print = False
 #for i in range(2):
-#while maze[pos][0] == bat1 or maze[pos][0] == bat2:
-if maze[pos][0] == bat1 or maze[pos][0] == bat2:
-    #pos = random.randint(0,19)
-    hit_bat_print = True
-    
-if maze[pos][0] == grump:
-    dead = True
-    alive = False
-
-for i in range(2):
-    if maze[pos][0] == caves[i]:
-        dead = True
-        alive = False
+#if maze[pos][0] == bat1 or maze[pos][0] == bat2:
 
 print('Content-Type: text/html')
 print()

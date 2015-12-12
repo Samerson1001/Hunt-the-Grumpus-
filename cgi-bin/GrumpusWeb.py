@@ -237,15 +237,15 @@ print('<html><body>')
 
 # print positions
 if alive == True:
-    print("cave", cave1, cave2, "bat", bat1, bat2, "grump", grump)
-    print("pos", maze[pos][0])
-    print('<p>')
-    print("alive", alive, "dead", dead)
-    print('<p>')
-    for i in range(0, 19):
-        print(maze[i])
-        print('<br>')
-    print('<p>')
+    #print("cave", cave1, cave2, "bat", bat1, bat2, "grump", grump)
+    #print("pos", maze[pos][0])
+    #print('<p>')
+    #print("alive", alive, "dead", dead)
+    #print('<p>')
+    #for i in range(0, 19):
+    #    print(maze[i])
+    #    print('<br>')
+    #print('<p>')
 
     # print text
     print("You are in room ", maze[pos][0])

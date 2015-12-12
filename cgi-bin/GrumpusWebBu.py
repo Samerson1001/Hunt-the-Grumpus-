@@ -192,11 +192,13 @@ while maze[pos][0] == bat1 or maze[pos][0] == bat2:
 if maze[pos][0] == grump:
     dead = True
     alive = False
+    first_run = True
 
 for i in range(2):
     if maze[pos][0] == caves[i]:
         dead = True
         alive = False
+        first_run = True
 
 # store values in cookie
 cookie['pos'] = pos
@@ -228,9 +230,6 @@ cookie['maze19'] = maze[19]
 cookie['first_run'] = first_run
 print(cookie)
 
-#for i in range(2):
-#if maze[pos][0] == bat1 or maze[pos][0] == bat2:
-
 print('Content-Type: text/html')
 print()
 
@@ -238,15 +237,15 @@ print('<html><body>')
 
 # print positions
 if alive == True:
-    print("cave", cave1, cave2, "bat", bat1, bat2, "grump", grump)
-    print("pos", maze[pos][0])
-    print('<p>')
-    print("alive", alive, "dead", dead)
-    print('<p>')
-    for i in range(0, 19):
-        print(maze[i])
-        print('<br>')
-    print('<p>')
+    #print("cave", cave1, cave2, "bat", bat1, bat2, "grump", grump)
+    #print("pos", maze[pos][0])
+    #print('<p>')
+    #print("alive", alive, "dead", dead)
+    #print('<p>')
+    #for i in range(0, 19):
+    #    print(maze[i])
+    #    print('<br>')
+    #print('<p>')
 
     # print text
     print("You are in room ", maze[pos][0])
@@ -287,6 +286,6 @@ else:
     elif maze[pos][0] == grump:
         print("The grump got ya")
     else:        
-        print("Thou art dead (cave)")
+        print("Thou art dead (cave)")    
 
 print('</body></html>')
